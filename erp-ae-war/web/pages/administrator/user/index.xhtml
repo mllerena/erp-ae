@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="./../../../resources/layout/template.xhtml">
+
+    <ui:define name="content">
+
+        <h:form id="UsersForm">
+
+            <p:menubar>
+
+                <p:menuitem value="Crear" icon="fa fa-plus Fs15" />
+
+                <p:menuitem value="Guardar" icon="fa fa-save Fs15" />
+
+                <p:menuitem value="Eliminar" icon="fa fa-close Fs15" />
+
+                <p:menuitem value="Descartar" icon="fa fa-undo Fs15" />
+
+                <f:facet name="options">
+                    <p:commandButton icon="ui-icon-hide icon-grid" /> 
+                    <p:commandButton icon="fa fa-table Fs15" />
+                    <p:commandButton icon="fa fa-file-text Fs15" /> 
+                    
+                </f:facet>
+            </p:menubar>
+
+            <p:toolbar >
+                <f:facet name="right">
+                    <p:inputText style="margin-right:10px" placeholder="Buscar" class="search" /> 
+                </f:facet>
+            </p:toolbar>
+
+
+            <ui:include src="/pages/administrator/user/list.xhtml"/> 
+
+
+
+
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

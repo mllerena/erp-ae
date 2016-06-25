@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<facelet-taglib>
+
+    <namespace>http://primefaces.org/aeopensolutions</namespace>
+    
+    
+    <tag>
+	  <tag-name>default</tag-name>
+	  <handler-class>org.aeopensolutions.view.components.VarDefaultTagHandler</handler-class>
+	</tag>
+    
+    <tag>
+        <tag-name>dataTable</tag-name>
+        <source>dataTable.xhtml</source>
+    </tag>  
+    
+    <tag>
+        <tag-name>dataList</tag-name>
+        <source>dataList.xhtml</source>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>rowKey</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>title</name>
+            <required>true</required>
+        </attribute>
+         <attribute>
+            <name>rendered</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+        </attribute>
+        
+    </tag>
+    
+    <tag>
+        <tag-name>dataEdit</tag-name>
+        <source>dataEdit.xhtml</source>
+    </tag>
+    
+    <tag>
+        <tag-name>context</tag-name>
+        <source>context.xhtml</source>
+    </tag> 
+        
+
+</facelet-taglib>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+
+
+
+    <p:dataTable id="dtUsuarios"  value="#{adUserView.listAdUser}" widgetVar="wvDat_dtUsuarios"   var="row"
+                 rowKey="#{row.id}" paginator="true"
+                 paginatorAlwaysVisible="true" paginatorPosition="top"
+                 rows="10"  
+                 emptyMessage="No existe datos" > 
+
+
+        <p:column headerText="Código">
+            <h:outputText value="#{row.id}" />
+        </p:column>
+
+        <p:column headerText="Usuario j">
+            <h:outputText value="#{row.name}" />
+        </p:column>
+
+
+
+        <p:column sortBy="#{row.created}" headerText="Creación"  width="130">
+            <h:outputText value="#{row.created}">
+                <f:convertDateTime pattern="dd-MM-yyyy HH:mm:ss" type="both" />
+            </h:outputText>
+        </p:column>
+
+        <p:column sortBy="#{row.createdby}" headerText="Creado por" width="110">
+            <h:outputText value="#{row.createdby}" />
+        </p:column>
+
+        <p:column sortBy="#{row.updated}" headerText="Actualización"  width="130">
+            <h:outputText value="#{row.updated}">
+                <f:convertDateTime pattern="dd-MM-yyyy HH:mm:ss" type="both" />
+            </h:outputText>
+        </p:column>
+
+        <p:column sortBy="#{row.updatedby}" headerText="Actualizado por"  width="140">
+            <h:outputText value="#{row.updatedby}" />
+        </p:column> 
+
+    </p:dataTable>
+
+</ui:composition>
